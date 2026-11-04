@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="meta.titulo">Johan Bermudez · Desarrollador backend</title>
+<meta name="description" content="Desarrollador backend en Python, Flask y Django. APIs REST, georreferenciación y dashboards 3D para decisiones comerciales." data-i18n-attr="content:meta.desc">
+<meta property="og:title" content="Johan Bermudez · Desarrollador backend">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/foto.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<script type="module" src="/src/main.js"></script>
+</head>
+<body>
+<div class="ruta" aria-hidden="true"></div>
+
+<nav class="navbar navbar-expand-md sticky-top cabecera">
+  <div class="container-xl">
+    <a class="navbar-brand marca" href="#inicio">JB</a>
+    <div class="d-flex align-items-center gap-2 order-md-2 ms-md-3">
+      <button type="button" class="btn btn-outline-dark btn-sm idioma" id="idioma" aria-label="Switch to English"><i class="bx bx-globe"></i> <span>EN</span></button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menú" data-i18n-attr="aria-label:nav.menu"><i class="bx bx-menu"></i></button>
+    </div>
+    <div class="collapse navbar-collapse justify-content-end order-md-1" id="menu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#experiencia" data-i18n="nav.exp">Experiencia</a></li>
+        <li class="nav-item"><a class="nav-link" href="#proyectos" data-i18n="nav.proy">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#stack" data-i18n="nav.stack">Stack</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto" data-i18n="nav.contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container-xl">
+  <section class="hero" id="inicio">
+    <div class="row align-items-center gx-5 gy-4 w-100">
+      <div class="col-lg-6">
+        <p class="rol"><i class="bx bx-map-pin"></i> <span data-i18n="hero.rol">Desarrollador backend en Soacha, Colombia</span></p>
+        <h1>Johan Styben<br>Bermudez Rubio</h1>
+        <p class="intro" data-i18n="hero.intro">Escribo APIs en Python que convierten datos sueltos en mapas, rutas y dashboards que un equipo comercial puede usar sin pedir ayuda.</p>
+        <div class="d-flex flex-wrap align-items-center gap-3">
+          <a class="btn btn-dark" href="#contacto"><i class="bx bx-envelope"></i> <span data-i18n="hero.hablemos">Hablemos</span></a>
+          <a class="btn btn-outline-dark" href="/CV_Johan_Bermudez.pdf" download><i class="bx bx-download"></i> <span data-i18n="hero.cv">Descargar hoja de vida</span></a>
+        </div>
+      </div>
+      <div class="col-lg-6 hero-mapa">
+        <svg viewBox="0 0 640 540" role="img" aria-label="Ruta que va de datos crudos a una decisión, pasando por una API y un dashboard" data-i18n-attr="aria-label:mapa.aria">
+          <defs>
+            <path id="curva" d="M300 60C420 40 560 120 580 240C600 360 500 460 380 480C260 500 120 440 80 320C40 200 160 80 300 60Z"/>
+          </defs>
+          <g class="curvas" fill="none" stroke-width="1.2">
+            <use href="#curva" vector-effect="non-scaling-stroke"/>
+            <use href="#curva" transform="translate(320 270) scale(.84) translate(-320 -270)" vector-effect="non-scaling-stroke"/>
+            <use href="#curva" transform="translate(320 270) scale(.68) translate(-320 -270)" vector-effect="non-scaling-stroke"/>
+            <use href="#curva" transform="translate(320 270) scale(.52) translate(-320 -270)" vector-effect="non-scaling-stroke"/>
+            <use href="#curva" transform="translate(320 270) scale(.36) translate(-320 -270)" vector-effect="non-scaling-stroke"/>
+            <use href="#curva" transform="translate(320 270) scale(.2) translate(-320 -270)" vector-effect="non-scaling-stroke"/>
+          </g>
+          <path class="trazo" pathLength="1" d="M90 430C170 400 190 320 270 318S370 230 420 236S520 150 560 118" fill="none"/>
+          <g class="paradas">
+            <g style="--d:.2s"><circle cx="90" cy="430" r="7"/><text x="90" y="462" text-anchor="middle" data-i18n="mapa.datos">Datos crudos</text></g>
+            <g style="--d:.9s"><circle cx="270" cy="318" r="7"/><text x="270" y="350" text-anchor="middle" data-i18n="mapa.api">API REST</text></g>
+            <g style="--d:1.5s"><circle cx="420" cy="236" r="7"/><text x="420" y="268" text-anchor="middle">Dashboard</text></g>
+            <g style="--d:2.1s" class="meta"><circle cx="560" cy="118" r="10"/><text x="560" y="88" text-anchor="middle" data-i18n="mapa.decision">Decisión</text></g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque" id="sobre-mi">
+    <div class="row g-4">
+      <div class="col-md-3"><h2 data-i18n="sobre.titulo">Sobre mí</h2></div>
+      <div class="col-md-9 col-lg-8 cuerpo">
+        <img class="foto" src="/foto.jpg" alt="Retrato de Johan Bermudez" data-i18n-attr="alt:sobre.foto" width="180" height="180" loading="lazy">
+        <p data-i18n="sobre.p1">Soy tecnólogo en Análisis y Desarrollo de Software del SENA y me especializo en backend con Python. Mi trabajo se mueve entre dos mundos: la lógica de servidor que nadie ve y las herramientas visuales que sí usa el equipo comercial.</p>
+        <p data-i18n="sobre.p2">En Servimax, una distribuidora de productos de la canasta familiar, pasé de recibir una necesidad en una reunión a entregar un mapa, un tablero o una API funcionando. Me gusta sentarme con quien va a usar la herramienta y traducir lo que necesita a algo que se pueda construir.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque" id="experiencia">
+    <div class="row g-4">
+      <div class="col-md-3"><h2 data-i18n="exp.titulo">Experiencia</h2></div>
+      <div class="col-md-9 col-lg-8 cuerpo">
+        <div class="d-flex flex-wrap justify-content-between align-items-baseline gap-1">
+          <h3 data-i18n="exp.cargo">Desarrollador backend</h3>
+          <p class="fechas mb-0" data-i18n="exp.fechas">Abril – Octubre 2025</p>
+        </div>
+        <p class="empresa" data-i18n="exp.empresa">Servimax, distribuidora de productos de la canasta familiar. Soacha. Pasante y contratista.</p>
+        <ul class="logros">
+          <li data-i18n="exp.l1"><strong>Rutas más rápidas.</strong> Armé herramientas de georreferenciación sobre RouteVision (Flask y Leaflet.js) que automatizan los polígonos comerciales y recortaron 25% el tiempo de trazado de rutas.</li>
+          <li data-i18n="exp.l2"><strong>Lotes de hasta 50.000 registros.</strong> Diseñé un motor analítico que los procesa con validaciones por sesión, y las colisiones de archivos desaparecieron.</li>
+          <li data-i18n="exp.l3"><strong>Tableros 3D para gerencia.</strong> Los construí junto al equipo comercial, con KPIs pensados para decidir la distribución. Ahora detectan patrones de compra y anomalías regionales 30% más rápido.</li>
+          <li data-i18n="exp.l4"><strong>Arquitectura ordenada.</strong> Application Factory y Blueprints para aislar las rutas de transporte, con sanitización estricta de los datos de entrada.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque" id="proyectos">
+    <div class="row g-4">
+      <div class="col-md-3"><h2 data-i18n="proy.titulo">Proyectos</h2></div>
+      <div class="col-md-9 col-lg-8">
+        <div class="accordion accordion-flush proyectos" id="lista-proyectos">
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#p1" aria-expanded="true" aria-controls="p1"><span><span class="nombre" data-i18n="p1.nombre">Ecosistema logístico y de inteligencia de ventas</span><span class="tec">Python, Flask, Folium, MySQL, JSON</span></span></button></h3>
+            <div id="p1" class="accordion-collapse collapse show" data-bs-parent="#lista-proyectos"><div class="accordion-body">
+              <p><b data-i18n="proy.reto">El reto.</b> <span data-i18n="p1.reto">Planear a mano las rutas de los asesores y ver el efecto de las devoluciones por zona.</span></p>
+              <p><b data-i18n="proy.hice">Lo que hice.</b> <span data-i18n="p1.hice">Una API REST que traza mapas interactivos con filtros avanzados y exporta a CSV, más módulos de intensidad cromática y logística inversa. Mejoraron la detección de patrones de compra y agilizaron la distribución.</span></p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p2" aria-expanded="false" aria-controls="p2"><span><span class="nombre" data-i18n="p2.nombre">Visualizador de dispersión 3D de alto rendimiento</span><span class="tec">Python, Plotly 3D, JSON</span></span></button></h3>
+            <div id="p2" class="accordion-collapse collapse" data-bs-parent="#lista-proyectos"><div class="accordion-body">
+              <p><b data-i18n="proy.reto">El reto.</b> <span data-i18n="p2.reto">Renderizar registros masivos de ventas de varias marcas afiliadas sin que el sistema se vuelva lento.</span></p>
+              <p><b data-i18n="proy.hice">Lo que hice.</b> <span data-i18n="p2.hice">Una arquitectura que convierte datos complejos en objetos JSON optimizados y una interfaz tridimensional escalable. Gerencia identifica tendencias complejas con rapidez.</span></p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p3" aria-expanded="false" aria-controls="p3"><span><span class="nombre" data-i18n="p3.nombre">Dashboard de análisis de producto</span><span class="tec">Python, Plotly, Flask, Pandas</span></span></button></h3>
+            <div id="p3" class="accordion-collapse collapse" data-bs-parent="#lista-proyectos"><div class="accordion-body">
+              <p><b data-i18n="proy.reto">El reto.</b> <span data-i18n="p3.reto">Que el equipo comercial pudiera leer el desempeño de los productos a partir de atributos técnicos masivos.</span></p>
+              <p><b data-i18n="proy.hice">Lo que hice.</b> <span data-i18n="p3.hice">Una API que genera gráficos dinámicos, filtra grandes volúmenes de datos y exporta los hallazgos.</span></p>
+            </div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p4" aria-expanded="false" aria-controls="p4"><span><span class="nombre" data-i18n="p4.nombre">Sistema de gestión de novedades</span><span class="tec" data-i18n="p4.tec">Django, MySQL, HTML5, CSS3. Proyecto colaborativo del SENA</span></span></button></h3>
+            <div id="p4" class="accordion-collapse collapse" data-bs-parent="#lista-proyectos"><div class="accordion-body">
+              <p><b data-i18n="proy.reto">El reto.</b> <span data-i18n="p4.reto">Digitalizar y centralizar el reporte de novedades académicas y administrativas del centro.</span></p>
+              <p><b data-i18n="proy.hice">Lo que hice.</b> <span data-i18n="p4.hice">Lideré el backend y la lógica de la base de datos. Implementé el CRUD completo y el sistema de permisos, y entregué un prototipo funcional en equipo.</span></p>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque" id="stack">
+    <div class="row g-4">
+      <div class="col-md-3"><h2 data-i18n="stack.titulo">Stack</h2></div>
+      <div class="col-md-9 col-lg-8">
+        <dl class="row stack mb-0">
+          <dt class="col-sm-3"><i class="bx bx-server"></i> Backend</dt>
+          <dd class="col-sm-9" data-i18n="stack.backend">Python, Flask, Django, MySQL, SQL, APIs REST, sistemas CRUD con permisos</dd>
+          <dt class="col-sm-3"><i class="bx bx-bar-chart-alt-2"></i> <span data-i18n="stack.datos">Datos</span></dt>
+          <dd class="col-sm-9">Pandas, Plotly, Plotly 3D, Folium, Leaflet.js, JSON</dd>
+          <dt class="col-sm-3"><i class="bx bx-window-alt"></i> Frontend</dt>
+          <dd class="col-sm-9" data-i18n="stack.frontend">HTML5, CSS3, Angular, Git, diseño UX/UI en Figma</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque" id="educacion">
+    <div class="row g-4">
+      <div class="col-md-3"><h2 data-i18n="edu.titulo">Educación</h2></div>
+      <div class="col-md-9 col-lg-8 estudios">
+        <article>
+          <h3 data-i18n="edu.t1">Tecnólogo en Análisis y Desarrollo de Software</h3>
+          <p class="fechas mb-1" data-i18n="edu.f1">SENA. Enero 2024 – Octubre 2025</p>
+          <a href="https://bit.ly/Sena-Titulo-Acta" target="_blank" rel="noopener"><i class="bx bx-link-external"></i> <span data-i18n="edu.l1">Ver título y acta de grado</span></a>
+        </article>
+        <article>
+          <h3 data-i18n="edu.t2">Bachiller Técnico en Desarrollo de Software</h3>
+          <p class="fechas mb-1" data-i18n="edu.f2">Institución Educativa Compartir. Enero 2018 – Diciembre 2023</p>
+          <a href="https://bit.ly/Diploma-y-Acta" target="_blank" rel="noopener"><i class="bx bx-link-external"></i> <span data-i18n="edu.l2">Ver diploma y acta de grado</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque" id="contacto">
+    <div class="row g-4">
+      <div class="col-md-3"><h2 data-i18n="cont.titulo">Contacto</h2></div>
+      <div class="col-md-9 col-lg-8">
+        <p class="llamado" data-i18n="cont.llamado">¿Tienes datos que mover o una herramienta por construir?</p>
+        <a class="correo" href="mailto:bermudezjohansena2006@gmail.com">bermudezjohansena2006@gmail.com</a>
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <a class="btn btn-outline-dark" href="https://github.com/J0H4N-B" target="_blank" rel="noopener"><i class="bx bxl-github"></i> GitHub</a>
+          <a class="btn btn-outline-dark" href="https://wa.me/573115121908" target="_blank" rel="noopener"><i class="bx bxl-whatsapp"></i> WhatsApp</a>
+          <a class="btn btn-outline-dark" href="/CV_Johan_Bermudez.pdf" download><i class="bx bx-download"></i> <span data-i18n="cont.cv">Hoja de vida (PDF)</span></a>
+        </div>
+        <p class="refs" data-i18n="cont.refs">Referencias laborales y personales disponibles a solicitud.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="container-xl pie">
+  <p class="mb-0">Johan Bermudez, <span id="anio"></span>. <span data-i18n="pie.texto">Hecho a mano con HTML, CSS, JavaScript y Bootstrap.</span></p>
+</footer>
+</body>
+</html>
