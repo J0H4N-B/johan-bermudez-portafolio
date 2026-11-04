@@ -16,7 +16,7 @@
   --bs-link-hover-color-rgb: 214, 51, 108;
 }
 
-html { scroll-padding-top: 4.5rem; }
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
 body { padding-left: 3.5rem; }
 ::selection { background: var(--ruta); color: #fff; }
 :focus-visible { outline: 3px solid var(--ruta); outline-offset: 3px; border-radius: 4px; }
@@ -209,4 +209,12 @@ h3 { font: 800 1.4rem var(--titulos); letter-spacing: -0.015em; line-height: 1.2
   .trazo { animation: none; stroke-dashoffset: 0; }
   .paradas g { animation: none; opacity: 1; }
   .accordion-collapse { transition: none; }
+}
+
+.js .bloque { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.js .bloque.visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .bloque { opacity: 1; transform: none; transition: none; }
 }
